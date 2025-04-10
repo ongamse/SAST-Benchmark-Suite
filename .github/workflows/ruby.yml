@@ -1,5 +1,5 @@
 ---
-name: Qwiet pre-zero Demo
+name: ruby
 
 on:
   pull_request:
