@@ -1,5 +1,5 @@
 ---
-name: Qwiet pre-zero Demo
+name: php
 
 on:
   pull_request:
