@@ -1,5 +1,5 @@
 ---
-name: Qwiet pre-zero Demo
+name: java
 
 on:
   pull_request:
