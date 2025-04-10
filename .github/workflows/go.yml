@@ -19,7 +19,7 @@ jobs:
       shell: bash
       run: |
         go mod init example.com/Go
-        sl analyze --verbose --wait --app "${GITHUB_REPOSITORY#*/}" --verbose --tag app.group=SAST_Benchmark_Suite --go Go/.
+        sl analyze --verbose --wait --app OWASPGo --verbose --tag app.group=SAST_Benchmark_Suite --go Go/.
         #sl analyze --verbose --wait --app SAST-Benchmark-Suite --verbose --tag app.group=SAST_Benchmark_Suite .
       env:
         SHIFTLEFT_ACCESS_TOKEN: ${{ secrets.SHIFTLEFT_ACCESS_TOKEN }}
