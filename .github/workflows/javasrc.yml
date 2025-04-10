@@ -1,0 +1,25 @@
+---
+name: Qwiet pre-zero Demo
+
+on:
+  pull_request:
+  workflow_dispatch:
+  push:
+
+
+jobs:
+  Qwiet-Static-Analysis:
+    runs-on: ubuntu-latest
+    container: shiftleft/core:latest
+    
+    steps:
+    
+    - uses: actions/checkout@v4
+    - name: Run sl analyze 
+      shell: bash
+      run: |
+        go mod init example.com/Go
+        sl analyze --verbose --wait --app OWASPJava --verbose --tag app.group=SAST_Benchmark_Suite --javasrc .
+        #sl analyze --verbose --wait --app SAST-Benchmark-Suite --verbose --tag app.group=SAST_Benchmark_Suite .
+      env:
+        SHIFTLEFT_ACCESS_TOKEN: ${{ secrets.SHIFTLEFT_ACCESS_TOKEN }}
