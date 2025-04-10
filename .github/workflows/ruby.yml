@@ -19,7 +19,7 @@ jobs:
       shell: bash
       run: |
         go mod init example.com/Go
-        sl analyze --verbose --wait --app OWASPRuby --verbose --tag app.group=SAST_Benchmark_Suite --ruby ./..
+        sl analyze --policy Ruby:0.0.1 --app OWASPRuby --tag app.group=SAST_Benchmark_Suite --ruby .
         #sl analyze --verbose --wait --app SAST-Benchmark-Suite --verbose --tag app.group=SAST_Benchmark_Suite .
       env:
         SHIFTLEFT_ACCESS_TOKEN: ${{ secrets.SHIFTLEFT_ACCESS_TOKEN }}
