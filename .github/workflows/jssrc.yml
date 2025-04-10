@@ -1,5 +1,5 @@
 ---
-name: Qwiet pre-zero Demo
+name: javascript
 
 on:
   pull_request:
