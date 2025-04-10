@@ -1,5 +1,5 @@
 ---
-name: Qwiet pre-zero Demo
+name: csharp
 
 on:
   pull_request:
